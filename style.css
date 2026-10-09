@@ -110,7 +110,7 @@ b { font-weight:700; }
 .ws { transition:color .2s, box-shadow .2s; }
 @media (max-width:820px) {
   html, body { height:auto; } body { overflow-y:auto; }
-  .desk { height:auto; min-height:100%; }
+  .desk { height:auto; min-height:100%; padding-bottom:26px; }
   .bar { grid-template-columns:1fr auto; } .mod.r { grid-column:1 / -1; justify-content:flex-start; gap:8px; }
   .space.on { display:flex; flex-direction:column; }
   .win { min-height:160px; } .body { overflow:visible; }
@@ -118,6 +118,8 @@ b { font-weight:700; }
 /* first-launch sequence: wallpaper brightens, bar drops in, windows pop open and type their commands */
 .chrome-hidden .wall { filter:brightness(.3); }
 .bar { transition:opacity .4s, transform .4s; }
+.mark { position:fixed; right:14px; bottom:8px; z-index:30; font-size:11px; color:var(--sub); pointer-events:none; user-select:none; transition:opacity .4s; }
+.chrome-hidden .mark { opacity:0; }
 .chrome-hidden .bar { opacity:0; transform:translateY(-100%); }
 .booting .win { opacity:0; }
 .win.in { animation:pop .26s cubic-bezier(.2,.9,.3,1.2) backwards; }

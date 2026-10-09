@@ -142,3 +142,9 @@ test("email is a mailto link", async ({ page }) => {
   await page.getByRole("tab", { name: /Workspace 2/ }).click();
   await expect(page.locator("#mail")).toHaveAttribute("href", /^mailto:.+@.+/);
 });
+
+test("copyright mark is on screen", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  await expect(page.getByText(/^© \d{4} Patrick Ocampo$/)).toBeVisible();
+});
