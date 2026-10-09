@@ -32,7 +32,7 @@ pre { margin:0; font:inherit; white-space:pre-wrap; }
 .desk { position:relative; z-index:1; height:100%; display:flex; flex-direction:column; gap:var(--gap); }
 
 /* waybar: flush, thin, clock centered */
-.bar { position:relative; z-index:20; background:color-mix(in srgb, var(--mantle) 82%, transparent); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-bottom:1px solid var(--line);
+.bar { position:relative; z-index:20; background:color-mix(in srgb, var(--mantle) 92%, transparent); /* no backdrop-filter: hover repaints here left un-blurred patches */ border-bottom:1px solid var(--line);
   display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:8px; padding:0 12px; font-size:13px; line-height:1; }
 .mod { display:flex; flex-wrap:wrap; align-items:center; gap:2px; }
 .mod.r { justify-content:flex-end; gap:12px; color:var(--sub); }
